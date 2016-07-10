@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "ClickDown for Instagram",
+  "short_name" : "ClickDown",
+  "description": "Provides download button to easily download images and videos from instagram and makes links click able.",
+  "version": "5.0",
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "logo16.png",
+           "48": "logo48.png",
+          "128": "logo128.png" 
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["vivek.js"]
+    }
+  ]
+}
